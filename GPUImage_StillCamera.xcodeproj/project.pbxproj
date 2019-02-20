@@ -15,6 +15,7 @@
 		EAE0C15E221D380C00B7B676 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = EAE0C15D221D380C00B7B676 /* main.m */; };
 		EAE0C168221D380D00B7B676 /* GPUImage_StillCameraTests.m in Sources */ = {isa = PBXBuildFile; fileRef = EAE0C167221D380D00B7B676 /* GPUImage_StillCameraTests.m */; };
 		EAE0C173221D380D00B7B676 /* GPUImage_StillCameraUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = EAE0C172221D380D00B7B676 /* GPUImage_StillCameraUITests.m */; };
+		EAE0C18D221D385500B7B676 /* libGPUImage.a in Frameworks */ = {isa = PBXBuildFile; fileRef = EAE0C187221D384400B7B676 /* libGPUImage.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -31,6 +32,27 @@
 			proxyType = 1;
 			remoteGlobalIDString = EAE0C14A221D380B00B7B676;
 			remoteInfo = GPUImage_StillCamera;
+		};
+		EAE0C186221D384400B7B676 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = EAE0C180221D384400B7B676 /* GPUImage.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = BCF1A33414DDB1EC00852800;
+			remoteInfo = GPUImage;
+		};
+		EAE0C188221D384400B7B676 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = EAE0C180221D384400B7B676 /* GPUImage.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = BCE209E51943F20C002FEED8;
+			remoteInfo = GPUImageFramework;
+		};
+		EAE0C18A221D385000B7B676 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = EAE0C180221D384400B7B676 /* GPUImage.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = BCF1A33314DDB1EC00852800;
+			remoteInfo = GPUImage;
 		};
 /* End PBXContainerItemProxy section */
 
@@ -51,6 +73,7 @@
 		EAE0C16E221D380D00B7B676 /* GPUImage_StillCameraUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GPUImage_StillCameraUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		EAE0C172221D380D00B7B676 /* GPUImage_StillCameraUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GPUImage_StillCameraUITests.m; sourceTree = "<group>"; };
 		EAE0C174221D380D00B7B676 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EAE0C180221D384400B7B676 /* GPUImage.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = GPUImage.xcodeproj; path = GPUImage/framework/GPUImage.xcodeproj; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +81,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EAE0C18D221D385500B7B676 /* libGPUImage.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -81,10 +105,12 @@
 		EAE0C142221D380B00B7B676 = {
 			isa = PBXGroup;
 			children = (
+				EAE0C180221D384400B7B676 /* GPUImage.xcodeproj */,
 				EAE0C14D221D380B00B7B676 /* GPUImage_StillCamera */,
 				EAE0C166221D380D00B7B676 /* GPUImage_StillCameraTests */,
 				EAE0C171221D380D00B7B676 /* GPUImage_StillCameraUITests */,
 				EAE0C14C221D380B00B7B676 /* Products */,
+				EAE0C18C221D385500B7B676 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -132,6 +158,22 @@
 			path = GPUImage_StillCameraUITests;
 			sourceTree = "<group>";
 		};
+		EAE0C181221D384400B7B676 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				EAE0C187221D384400B7B676 /* libGPUImage.a */,
+				EAE0C189221D384400B7B676 /* GPUImage.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		EAE0C18C221D385500B7B676 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -146,6 +188,7 @@
 			buildRules = (
 			);
 			dependencies = (
+				EAE0C18B221D385000B7B676 /* PBXTargetDependency */,
 			);
 			name = GPUImage_StillCamera;
 			productName = GPUImage_StillCamera;
@@ -221,6 +264,12 @@
 			mainGroup = EAE0C142221D380B00B7B676;
 			productRefGroup = EAE0C14C221D380B00B7B676 /* Products */;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = EAE0C181221D384400B7B676 /* Products */;
+					ProjectRef = EAE0C180221D384400B7B676 /* GPUImage.xcodeproj */;
+				},
+			);
 			projectRoot = "";
 			targets = (
 				EAE0C14A221D380B00B7B676 /* GPUImage_StillCamera */,
@@ -229,6 +278,23 @@
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		EAE0C187221D384400B7B676 /* libGPUImage.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libGPUImage.a;
+			remoteRef = EAE0C186221D384400B7B676 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		EAE0C189221D384400B7B676 /* GPUImage.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = GPUImage.framework;
+			remoteRef = EAE0C188221D384400B7B676 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
 		EAE0C149221D380B00B7B676 /* Resources */ = {
@@ -296,6 +362,11 @@
 			isa = PBXTargetDependency;
 			target = EAE0C14A221D380B00B7B676 /* GPUImage_StillCamera */;
 			targetProxy = EAE0C16F221D380D00B7B676 /* PBXContainerItemProxy */;
+		};
+		EAE0C18B221D385000B7B676 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = GPUImage;
+			targetProxy = EAE0C18A221D385000B7B676 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -436,10 +507,17 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = R45LY736NP;
+				HEADER_SEARCH_PATHS = "GPUImage/framework/**";
 				INFOPLIST_FILE = GPUImage_StillCamera/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
+				);
+				OTHER_LDFLAGS = (
+					"-fobjc-arc",
+					"-ObjC",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "ZB.GPUImage-StillCamera";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -452,10 +530,17 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = R45LY736NP;
+				HEADER_SEARCH_PATHS = "GPUImage/framework/**";
 				INFOPLIST_FILE = GPUImage_StillCamera/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
+				);
+				OTHER_LDFLAGS = (
+					"-fobjc-arc",
+					"-ObjC",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "ZB.GPUImage-StillCamera";
 				PRODUCT_NAME = "$(TARGET_NAME)";
